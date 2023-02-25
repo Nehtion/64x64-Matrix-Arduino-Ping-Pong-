@@ -33,8 +33,8 @@ int prePos1 = 31;
 int prePos2 = 31;
 int cx = 31;  //Circle x
 int cy = 31;  //Circle y
-int dx;   //Direction x
-int dy;   //Direction y
+float dx;   //Direction x
+float dy;   //Direction y
 float cs = 1;   //Circle Size
 int precx = 31;
 int precy = 31;
@@ -101,12 +101,25 @@ void PingPong() {
   if (cy - cs < 0 || cy + cs > matrix.height()) {
     dy = -dy;
   }
-  if (cx - cs <= posP1X + bWidth && cy >= posP1Y && cy <= posP1Y + bHeight) {
-    dx = 1;
+  if (cx - cs <= posP1X + bWidth && cy >= posP1Y && cy <= posP1Y + (bHeight/3)) {
+    dx = 1.5;
   }
 
-  if (cx + cs >= posP2X && cy >= posP2Y && cy <= posP2Y + bHeight) {
+  if (cx - cs <= posP1X + bWidth && cy >= posP1Y + (bHeight/3) && cy <= posP1Y + ((bHeight/3)*2)) {
+    dx = 1;
+  }
+  if (cx - cs <= posP1X + bWidth && cy >= posP1Y + ((bHeight/3)*2) && cy <= posP1Y + bHeight) {
+    dx = 0.5;
+  }
+
+  if (cx + cs >= posP2X && cy >= posP2Y && cy <= posP2Y + (bHeight/3)) {
+    dx = -1.5;
+  }
+  if (cx + cs >= posP2X && cy >= posP2Y + (bHeight/3) && cy <= posP2Y + ((bHeight/3)*2)) {
     dx = -1;
+  }
+  if (cx + cs >= posP2X && cy >= posP2Y + ((bHeight/3)*2) && cy <= posP2Y + bHeight) {
+    dx = -0.5;
   }
   if (cx - cs < 0) {
     P2Score++;
