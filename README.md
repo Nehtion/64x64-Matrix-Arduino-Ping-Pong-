@@ -16,4 +16,4 @@ The Resistor used is 10K Ohm. You don't need to actually use Resistors, I just u
 
 What is also important to know is, that depending on where the ball/sphere hits the Matrix Panel, the Angle it's going to go is also changing so when it's hitting the top third of the player's brick it will change its direction in an extremer angle then it would do if it hits the middle or bottom half
 
-If you have any Questions you can e-mail me at linkmarkuspwd@gmail.com or you create an Pull request
+If you have any Questions you can e-mail me at linkmarkuspwd@gmail.com or you create an Issue
